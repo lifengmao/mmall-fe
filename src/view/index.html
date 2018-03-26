@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%= require('html-loader!./layout/html-head.html') %>
+  <head>
+    <%= require('html-loader!./layout/head-common.html') %>
+    <title>happymmall电商平台</title>
+  </head>
   <body>
-      hello~~~~
-      <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <%= require('html-loader!./layout/nav.html') %>
+    <%= require('html-loader!./layout/header.html') %>
+    <div class="page-wrap w">
+      <%= require('html-loader!./layout/nav-side.html') %>
+      <div class="content with-nav"></div>
+    </div>
+    <%= require('html-loader!./layout/footer-common.html') %>
   </body>
 </html>

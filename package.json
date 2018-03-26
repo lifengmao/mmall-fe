@@ -29,5 +29,8 @@
     "webpack-cli": "^2.0.13",
     "webpack-dev-server": "^2.11.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan": "^1.0.2"
+  }
 }
