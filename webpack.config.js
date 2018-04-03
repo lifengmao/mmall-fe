@@ -17,6 +17,8 @@ var config = {
   entry:{
     'common':[path.resolve(__dirname,'./src/page/common/index.js')],
     'index':path.resolve(__dirname,'./src/page/index/index.js'),
+    'list':path.resolve(__dirname,'./src/page/list/index.js'),
+    'detail':path.resolve(__dirname,'./src/page/detail/index.js'),
     'user-login':path.resolve(__dirname,'./src/page/user-login/index.js'),
     'user-register':path.resolve(__dirname,'./src/page/user-register/index.js'),
     'user-pass-reset':path.resolve(__dirname,'./src/page/user-pass-reset/index.js'),
@@ -78,6 +80,8 @@ var config = {
     }),
     new ExtractTextPlugin('css/[name].css'),
     new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+    new HtmlWebpackPlugin(getHtmlConfig('list','商品列表页')),
+    new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
     new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
     new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),

@@ -74,7 +74,7 @@ var _mm = {
     window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
   },
   goHome:function(){
-    window.location.href = './view/index.html';
+    window.location.href = './index.html';
   }
 };
 
