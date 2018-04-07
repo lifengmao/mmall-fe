@@ -76,7 +76,7 @@ var page = {
                 nextPage        : res.nextPage,
                 pageNum         : res.pageNum,
                 pages           : res.pages
-      })
+      });
     },function(errMsg){
       _mm.errorTips(errMsg);
     })
@@ -88,7 +88,6 @@ var page = {
    this.pagination.render($.extend({},pageInfo,{
      container:$('.pagination'),
      onSelectPage:function(pageNum){
-       console.log(pageNum);
       _this.data.listParam.pageNum = pageNum;
       _this.loadList()
      }
