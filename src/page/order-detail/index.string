@@ -25,7 +25,7 @@
         </div>
         <div class="text-line">
           {{#needPay}}
-          <a href="./payment.html?orderNumbenr={{orderNo}}" class="btn">去支付</a>
+          <a href="./payment.html?orderNumber={{orderNo}}" class="btn">去支付</a>
           {{/needPay}}
           {{#isCancelable}}
           <a class="btn order-cancel">取消订单</a>
