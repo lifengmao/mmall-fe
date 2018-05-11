@@ -7,6 +7,7 @@ var getHtmlConfig = function(name,title) {
   return {
     template:'./src/view/'+name+'.html',
     filename:'view/'+name+'.html',
+    favicon:'./favicon.ico',
     title:title,
     inject:true,
     hash:true,
@@ -30,11 +31,13 @@ var config = {
     'user-center':path.resolve(__dirname,'./src/page/user-center/index.js'),
     'user-center-update':path.resolve(__dirname,'./src/page/user-center-update/index.js'),
     'user-pass-update':path.resolve(__dirname,'./src/page/user-pass-update/index.js'),
-    'result':path.resolve(__dirname,'./src/page/result/index.js')
+    'result':path.resolve(__dirname,'./src/page/result/index.js'),
+    'about':path.resolve(__dirname,'./src/page/about/index.js')
   },
   output:{
     filename:'js/[name].bundle.js',
-    publicPath:'/dist',
+    // publicPath:'/dist/',
+    publicPath:'//s.happymmall.com/mmall-fe/dist/',
     path:path.resolve(__dirname,'./dist')
   },
   externals:{
@@ -99,6 +102,7 @@ var config = {
     new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),
     new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
     new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
+    new HtmlWebpackPlugin(getHtmlConfig('about','关于mmall')),
   ]
 }
 
